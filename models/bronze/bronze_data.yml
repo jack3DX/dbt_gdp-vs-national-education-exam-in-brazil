@@ -18,7 +18,7 @@ models:
         description: The name of the region. There are five official regions in Brazil.
         tests:
           - accepted_values:
-              values: ['Centro-Oeste', 'Norte', 'Nordeste', 'Sul', 'Sudeste']
+              values: ['Centro-oeste', 'Norte', 'Nordeste', 'Sul', 'Sudeste']
       - name: uf_code
         description: The code of the municipality's federal state.
       - name: uf_name
