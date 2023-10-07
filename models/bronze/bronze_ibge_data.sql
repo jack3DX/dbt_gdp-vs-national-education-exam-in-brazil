@@ -12,3 +12,4 @@ select
     uf_acronym,
     region_code
 from {{ source("redshift_raw_data", "raw_ibge_data") }}
+
