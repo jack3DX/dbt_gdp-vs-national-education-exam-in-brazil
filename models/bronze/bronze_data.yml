@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: bronze_ibge_data
+    description: Bronze version of IBGE's data. No duplicates or nulls. 
+    columns:
+      - name: municipality_code
+        description: Unique code for each municipality.
+        tests:
+          - not_null
+      - name: municipality_name
+        description: The name of the municipality.
+      - name: year
+        description: The relative year of the GDP data.
+      - name: gdp
+        description: The GDP index.
+      - name: region_name
+        description: The name of the region. There are five official regions in Brazil.
+        tests:
+          - accepted_values:
+              values: ['Centro-Oeste', 'Norte', 'Nordeste', 'Sul', 'Sudeste']
+      - name: uf_code
+        description: The code of the municipality's federal state.
+      - name: uf_name
+        description: The name of the municipality's federal state.
+      - name: uf_acronym
+        description: The acronym of the municipality's federal state.
+      - name: region_code
+        description: Unique code for the region.
+
+  - name: bronze_inep_data
+    description: Bronze version of IBGE's data. No duplicates or nulls. 
+    columns:
+      - name: id
+        description: Unique code for each student.
+        tests:
+          - not_null
+      - name: school_code
+        description: School identifier.
+      - name: ch_score
+        description: Human sciences questions score.
+      - name: year
+        description: The year of the test.
+      - name:  ethnicity_code
+        description: The code of the self-declared ethnicity of each applicant.
+      - name: mt_score
+        description: Math questions score.
+      - name: municipality_code
+        description: Unique identifier of the applicant's city.
+      - name: essay_score
+        description: Essay score.
+      - name: conclusion_year
+        description: High school conclusion year of each applicant.
+      - name: uf_code
+        description: Unique identifier of the federal state of each applicant,
+      - name: uf_name
+        description: Applicant's federal state name.
+      - name: lc_score
+        description: Languages questions score.
+      - name: sex_code
+        description: Applicant's sex.
+      - name: nationality_code
+        description: Applicant's nationality.
+      - name: is_training
+        description: Whether the applicant is doing it for training purposes or not.
+      - name: municipality_name
+        description: The applicant's municipality.
+      - name: conclusion_code
+        description: A code regarding the applicant's high school status.
+      - name: teaching_code
+        description: The type of institution where the applicant's finished high school.
+      - name: age_code
+        description: The applicant's age group.
+      - name: cn_score
+        description: Nature science questions score.
+      - name: civil_code
+        description: Applicant's marital status.

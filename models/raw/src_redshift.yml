@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: redshift_raw_data
+    description: A Redshift serverless instance with INEP's and IBGE's data ingested via Airbyte.
+    database: dev
+    schema: raw_data
+    tables:
+      - name: raw_inep_data
+        description: Data from ENEM.
+      - name: raw_ibge_data
+        description: Data from IBGE, with information about GDP per municipality.
