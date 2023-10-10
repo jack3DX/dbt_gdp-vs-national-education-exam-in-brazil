@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: silver_ml_granular_master_data
+    description: A master table built with a join between both bronze tables. Contains granular data of each applicant, no aggregations or grouping aplied. 
+    columns:
+      - name: id
+        description: Unique code for each student.
+        tests:
+          - not_null
+      - name: ch_score
+        description: Human sciences questions score.
+      - name: mt_score
+        description: Math questions score.
+      - name: essay_score
+        description: Essay score.
+      - name: lc_score
+        description: Languages questions score.
+      - name: cn_score
+        description: Nature science questions score.
+      - name: year
+        description: The year of the test.
+      - name: municipality_code
+        description: Unique identifier of the applicant's city.
+      - name: uf_code
+        description: The code of the applicant's municipality federal state.
+      - name: region_code
+        description: Unique code for the applicant's region.
+      - name: gdp
+        description: The GDP index.
+      - name: gdp_capita
+        description: The GDP index per capita.
+      - name:  ethnicity_code
+        description: The code of the self-declared ethnicity of each applicant.
+      - name: sex_code
+        description: Applicant's sex.
+      - name: nationality_code
+        description: Applicant's nationality.
+      - name: is_training
+        description: Whether the applicant is doing it for training purposes or not.
+      - name: conclusion_code
+        description: A code regarding the applicant's high school status.
+      - name: teaching_code
+        description: The type of institution where the applicant's finished high school.
+      - name: age_code
+        description: The applicant's age group.
+      - name: civil_code
+        description: Applicant's marital status.
