@@ -14,6 +14,8 @@ models:
         description: The relative year of the GDP data.
       - name: gdp
         description: The GDP index.
+      - name: gdp_capita
+        description: The GDP index per capita.
       - name: region_name
         description: The name of the region. There are five official regions in Brazil.
         tests:
